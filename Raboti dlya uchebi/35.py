@@ -4,4 +4,4 @@ while True:
         print(f"Число '{a}' чётное")
     else:
         print(f"Число '{a}' не чётное")
-    if input(f'Продолжить? [Да/Нет] \n') != 'Да': break
+    if input(f'Продолжить? [Да/Нет] ') != 'Да': break
