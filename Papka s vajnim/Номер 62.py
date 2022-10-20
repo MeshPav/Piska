@@ -25,26 +25,45 @@ while True:
     print('Выпавшее число: ', b)
     if b in red_num:
         print('Выигрышная ставка: Красное')
-        color = 'красное'
+        color = 'Красное'
+        if a == color:
+            print(f'Поздравляем! Ваша ставка на {a} сыграла!')
     if b in black_num:
         print('Выигрышная ставка: Чёрное')
-        color = 'чёрное'
+        color = 'Чёрное'
+        if a == color:
+            print(f'Поздравляем! Ваша ставка на {a} сыграла!')
     if b in chet_num:
         print('Выигрышная ставка: Чётное')
         chet = 'Чётное'
+        if a == chet:
+            print(f'Поздравляем! Ваша ставка на {a} сыграла')
     if b in nechet_num:
         print('Выигрышная ставка: Нечётное')
         chet = 'Нечётное'
+        if a == chet:
+            print(f'Поздравляем! Ваша ставка на {a} сыграла')
     if b in first_num:
         print('Выигрышная ставка: 1-18')
         nums = '1-18'
+        if a == nums:
+            print(f'Поздравляем! Ваша ставка на {a} сыграла')
     if b in second_num:
         print('Выигрышная ставка: 19-36')
         nums = '19-36'
+        if a == nums:
+            print(f'Поздравляем! Ваша ставка на {a} сыграла')
     if b in zero_num:
         print('Выигрышная ставка: 0')
+        if a == '0':
+            print(f'Поздравляем! Ваша ставка на {a} сыграла')
     if b in doublezero_num:
         print('Выигрышная ставка: 00')
+        if a == '00':
+            print(f'Поздравляем! Ваша ставка на {a} сыграла')
+    if a == b:
+        print(f'Поздравляем! Ваша ставка на {a} сыграла')
+
     time.sleep(1)
     print('Перезапустить рулетку? [y/n] ')
     key = keyboard.read_key()
