@@ -22,7 +22,7 @@ while True:
               '00 \n '
               'Любое число от 0 до 36 \n')
     b = random.randint(0, 38)
-    print('Выигрышное число: ', b)
+    print('Выпавшее число: ', b)
     if b in red_num:
         print('Выигрышная ставка: Красное')
         color = 'красное'
