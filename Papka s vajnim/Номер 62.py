@@ -7,7 +7,7 @@ black_num = [2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35]
 chet_num = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34]
 nechet_num = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35]
 zero_num = [0]
-doublezero_num = [37]
+doublezero_num = [00]
 first_num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, ]
 second_num = [19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]
 while True:
@@ -63,20 +63,13 @@ while True:
             print(f'Поздравляем! Ваша ставка на {a} сыграла')
     if a == b:
         print(f'Поздравляем! Ваша ставка на {a} сыграла')
-
     time.sleep(1)
     print('Перезапустить рулетку? [y/n] ')
-    key = keyboard.read_key()
-    if key not in ('y', 'n'):
-        if key != 'y' or 'n':
-            print('Неправильная кнопка, до свидания ')
-            time.sleep(1)
-            break
-    else:
-        if key == 'y':
-            time.sleep(1)
-            continue
+    try:  # used try so that if user pressed other than the given key error will not be shown
+        if keyboard.is_pressed('y'):  # if key 'q' is pressed
+            print('You Pressed A Key!')
+            break  # finishing the loop
         else:
-            time.sleep(1)
-            print('До свидания')
-            break
+            pass
+    except:
+        break  # if user pressed a key other than the given key the loop will break
