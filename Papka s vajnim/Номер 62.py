@@ -10,6 +10,7 @@ zero_num = [0]
 doublezero_num = [00]
 first_num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, ]
 second_num = [19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]
+
 while True:
     color = ''
     chet = ''
@@ -64,10 +65,11 @@ while True:
     if a == b:
         print(f'Поздравляем! Ваша ставка на {a} сыграла')
     time.sleep(1)
-    print('Перезапустить рулетку? [y/n] ')
+    print('Перезапустить рулетку? [д/н] ')
+    keyboard.read_key()
     try:  # used try so that if user pressed other than the given key error will not be shown
-        if keyboard.is_pressed('y'):  # if key 'q' is pressed
-            print('You Pressed A Key!')
+        if keyboard.is_pressed('н'):  # if key 'q' is pressed
+            print('До свидания!')
             break  # finishing the loop
         else:
             pass
